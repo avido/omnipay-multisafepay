@@ -27,7 +27,7 @@
         "psr-4": { "Omnipay\\MultiSafepay\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "3.0.4"
+        "omnipay/common": "^3"
     },
     "require-dev": {
         "omnipay/tests": "^3",
