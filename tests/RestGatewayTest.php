@@ -56,4 +56,11 @@ class RestGatewayTest extends GatewayTestCase
         $this->assertInstanceOf('Omnipay\MultiSafepay\Message\RestCompletePurchaseRequest', $request);
         $this->assertEquals($request->getAmount(), 10.00);
     }
+
+    public function testVoidRequest()
+    {
+        $request = $this->gateway->void(array('transaction_id' => '123456890'));
+
+        $this->assertInstanceOf('Omnipay\MultiSafepay\Message\RestVoidRequest', $request);
+    }
 }
