@@ -255,4 +255,12 @@ class RestGateway extends AbstractGateway
             $parameters
         );
     }
+
+    public function void(array $parameters = array())
+    {
+        return $this->createRequest(
+            'Omnipay\MultiSafepay\Message\RestVoidRequest',
+            $parameters
+        );
+    }
 }
